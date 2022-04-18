@@ -43,7 +43,7 @@ spec:
             - name: HOMEBRIDGE_CONFIG_UI
               value: "1"
             - name: HOMEBRIDGE_CONFIG_UI_PORT
-              value: "38581"
+              value: "30080"
             - name: TZ
               value: "Europe/Paris"
   volumeClaimTemplates:
@@ -82,8 +82,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 38581
-      nodePort: 38581
+    - port: 30080
+      nodePort: 30080
       name: http
   selector:
     app: homebridge
