@@ -23,7 +23,7 @@ spec:
       labels:
         name: homebridge
     spec:
-      hostNetwork: true
+      hostNetwork: false
       dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: homebridge
