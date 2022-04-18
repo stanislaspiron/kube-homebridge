@@ -60,21 +60,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: host-network-homebridge
-  namespace: homebridge
-  labels:
-      app: homebridge
-spec:
-  ports:
-  - port: 8581
-    name: homebridge-ui
-  clusterIP: None
-  selector:
-    app: homebridge
----
-apiVersion: v1
-kind: Service
-metadata:
   name: homebridge-nodeport
   namespace: homebridge
   labels:
