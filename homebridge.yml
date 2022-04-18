@@ -71,3 +71,19 @@ spec:
   clusterIP: None
   selector:
     app: homebridge
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: homebridge-nodeport
+  namespace: homebridge
+  labels:
+      app: homebridge
+spec:
+  type: NodePort
+  ports:
+    - port: 8581
+      nodePort: 8581
+      name: http
+  selector:
+    app: homebridge
