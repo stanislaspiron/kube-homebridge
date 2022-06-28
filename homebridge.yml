@@ -29,8 +29,8 @@ spec:
         - name: homebridge
           securityContext:
             privileged: true
-            #image: 'docker.io/oznu/homebridge:latest'
-          image: 'docker.io/oznu/homebridge:no-avahi'
+          image: 'docker.io/oznu/homebridge:latest'
+          #image: 'docker.io/oznu/homebridge:no-avahi'
           volumeMounts:
             - name: homebridge
               mountPath: /homebridge
